@@ -10,7 +10,6 @@ public class P08_BrowserHistoryUpdate {
         ArrayDeque<String> historyBack = new ArrayDeque<>();
         ArrayDeque<String> historyForward = new ArrayDeque<>();
 
-
         String line = scanner.nextLine();
 
         while (!"Home".equals(line)) {
