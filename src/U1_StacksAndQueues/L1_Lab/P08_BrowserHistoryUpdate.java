@@ -7,22 +7,37 @@ public class P08_BrowserHistoryUpdate {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayDeque<String> history = new ArrayDeque<>();
+        ArrayDeque<String> historyBack = new ArrayDeque<>();
+        ArrayDeque<String> historyForward = new ArrayDeque<>();
+
 
         String line = scanner.nextLine();
 
         while (!"Home".equals(line)) {
 
-            if (!"back".equals(line)) {
-                history.push(line);
+            if (!"back".equals(line) && !"forward".equals(line)) {
+                historyBack.push(line);
                 System.out.println(line);
 
+                historyForward.clear();
+
             } else {
-                if (history.size() <= 1) {
-                    System.out.println("no previous URLs");
+                if ("back".equals(line)) {
+                    if (historyBack.size() <= 1) {
+                        System.out.println("no previous URLs");
+                    } else {
+                        String currentLink = historyBack.pop();
+                        historyForward.push(currentLink);
+                        System.out.println(historyBack.peek());
+                    }
                 } else {
-                    history.pop();
-                    System.out.println(history.peek());
+                    if (historyForward.isEmpty()) {
+                        System.out.println("no next URLs");
+                    } else {
+                        String currentLink = historyForward.pop();
+                        historyBack.push((currentLink));
+                        System.out.println(currentLink);
+                    }
                 }
             }
 
