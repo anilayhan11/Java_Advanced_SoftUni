@@ -8,25 +8,11 @@ public class P05_MaximumSumOf2x2Submatrix {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int[] dimensions = Arrays.stream(scanner.nextLine().split(", "))
-                .mapToInt(Integer::parseInt)
-                .toArray();
-
-        int rows = dimensions[0];
-        int cols = dimensions[1];
-
-        int[][] matrix = new int[rows][cols];
-
-        for (int r = 0; r < rows; r++) {
-            matrix[r] = Arrays.stream(scanner.nextLine().split(", "))
-                    .mapToInt(Integer::parseInt)
-                    .toArray();
-        }
+        int[][] matrix = readMatrix(scanner);
 
         int[][] maxSubmatrix = new int[2][2];
 
         int finalSum = Integer.MIN_VALUE;
-
         //1. Iterate over matrix (except the last row and column)
         for (int r = 0; r < matrix.length - 1; r++) {
             for (int c = 0; c < matrix[r].length - 1; c++) {
@@ -55,5 +41,26 @@ public class P05_MaximumSumOf2x2Submatrix {
         System.out.println(maxSubmatrix[0][0] + " " + maxSubmatrix[0][1]);
         System.out.println(maxSubmatrix[1][0] + " " + maxSubmatrix[1][1]);
         System.out.println(finalSum);
+    }
+
+    private static int[][] readMatrix(Scanner scanner) {
+        int[] dimensions = readArray(scanner);
+
+        int rows = dimensions[0];
+        int cols = dimensions[1];
+
+        int[][] matrix = new int[rows][cols];
+
+        for (int r = 0; r < rows; r++) {
+            matrix[r] = readArray(scanner);
+        }
+
+        return matrix;
+    }
+
+    private static int[] readArray(Scanner scanner) {
+        return Arrays.stream(scanner.nextLine().split(", "))
+                .mapToInt(Integer::parseInt)
+                .toArray();
     }
 }
