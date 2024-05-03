@@ -28,23 +28,27 @@ public class P02_PositionsOf2 {
             }
         }
 
-        boolean isFound = false;
-
         int specialValue = Integer.parseInt(scanner.nextLine());
+
+        StringBuilder outputLines = new StringBuilder();
 
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix[row].length; col++) {
                 int currentElement = matrix[row][col];
 
                 if (currentElement == specialValue) {
-                    System.out.println(row + " " + col);
-                    isFound = true;
+                    outputLines.append(row).append(" ").append(col).append("\n");
+
                 }
             }
         }
 
-        if (!isFound) {
+        if (outputLines.isEmpty()) {
             System.out.println("not found");
+
+        } else {
+            System.out.println(outputLines);
+
         }
     }
 
