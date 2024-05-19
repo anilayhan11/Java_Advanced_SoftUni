@@ -11,7 +11,7 @@ public class P05_MatrixShuffling {
         int rows = Integer.parseInt(matrixSize[0]);
         int cols = Integer.parseInt(matrixSize[1]);
 
-        //Create and fill-in matrix
+        //Create and fill in matrix
         String[][] matrix = new String[rows][cols];
 
         for (int row = 0; row < rows; row++) {
