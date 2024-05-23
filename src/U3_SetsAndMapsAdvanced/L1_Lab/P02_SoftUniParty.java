@@ -1,4 +1,4 @@
-package U03_SetsAndMapsAdvanced.L1_Lab;
+package U3_SetsAndMapsAdvanced.L1_Lab;
 
 import java.util.Scanner;
 import java.util.Set;
