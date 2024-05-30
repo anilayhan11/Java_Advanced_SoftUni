@@ -34,13 +34,13 @@ public class P08_UserLogs {
         }
 
         for (var attacker : users.entrySet()) {
-            System.out.printf("%s:%n", attacker.getKey());
+            System.out.printf("%s: %n", attacker.getKey());
 
             LinkedHashMap<String, Integer> attacks = attacker.getValue();
             StringBuilder sb = new StringBuilder();
 
             for (var ipAttack : attacks.entrySet()) {
-                sb.append(String.format("%s => %d,\n", ipAttack.getKey(), ipAttack.getValue()));
+                sb.append(String.format("%s => %d,%n", ipAttack.getKey(), ipAttack.getValue()));
             }
 
             String finalOutput = sb.substring(0, sb.length() - 2);
