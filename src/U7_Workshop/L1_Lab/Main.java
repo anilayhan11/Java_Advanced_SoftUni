@@ -1,4 +1,4 @@
-package U7_Workshop;
+package U7_Workshop.L1_Lab;
 
 public class Main {
     public static void main(String[] args) {
