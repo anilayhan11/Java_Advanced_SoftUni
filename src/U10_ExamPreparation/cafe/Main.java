@@ -1,4 +1,4 @@
-package U10_ExamPreparation.P03_Cafe.cafe;
+package U10_ExamPreparation.cafe;
 
 public class Main {
 

@@ -1,10 +1,9 @@
-package U10_ExamPreparation.P03_Cafe.cafe;
+package U10_ExamPreparation.Openning.src.bakery;
 
 public class Employee {
     private String name;
     private int age;
     private String country;
-
 
     public Employee(String name, int age, String country) {
         this.name = name;
@@ -38,6 +37,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return String.format("Employee: %s, %d from %s", this.name, this.age, this.country);
+        return String.format("Employee: %s, %d (%s)", this.name, this.age, this.country);
+
     }
 }
