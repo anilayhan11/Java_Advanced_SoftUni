@@ -1,4 +1,4 @@
-package U9_IteratorsAndComparators.P02_Library;
+package U9_IteratorsAndComparators.L1_Lab.P01_Book;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,13 +9,14 @@ public class Book {
     private int year;
     private List<String> authors;
 
-
     public Book(String title, int year, String... authors) {
         this.title = title;
         this.year = year;
         this.authors = new ArrayList<>(Arrays.asList(authors));
     }
 
+
+    //getters and setters
 
     public String getTitle() {
         return title;

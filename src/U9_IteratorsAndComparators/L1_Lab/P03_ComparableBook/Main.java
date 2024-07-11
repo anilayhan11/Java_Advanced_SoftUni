@@ -1,4 +1,4 @@
-package U9_IteratorsAndComparators.P03_ComparableBook;
+package U9_IteratorsAndComparators.L1_Lab.P03_ComparableBook;
 
 public class Main {
     public static void main(String[] args) {

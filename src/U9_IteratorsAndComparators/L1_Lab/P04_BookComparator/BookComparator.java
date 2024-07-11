@@ -1,4 +1,4 @@
-package U9_IteratorsAndComparators.P04_BookComparator;
+package U9_IteratorsAndComparators.L1_Lab.P04_BookComparator;
 
 import java.util.Comparator;
 
